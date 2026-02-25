@@ -4,16 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+
+        :root{
+            --primary_color: #f9f5ff; 
+            --secondary_color: #d4c2fc; 
+            --tri_color: #9560C1;
+            --bold_color: #28262c;
+        }
+
+        body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+        background-color: var(--primary_color);
+      }
+
+      .form input[type="number"] {
+        width: 200px;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+
+      }
+      h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        color: var(--bold_color);
+      }
+
+      p, div{ 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      #button_A, #button_B{
+        background-color: var(--secondary_color);
+        border: 5px outset var(--tri_color); 
+        padding: 5px;
+      }
+
+      .guessSubmit{
+        background-color: var(--secondary_color);
+        border: 3px solid var(--tri_color); 
+      }
+
+    </style>
+
     <!--import JS in an external file-->
     <script src="script.js" defer></script>
     <title>Lab 4</title>
 </head>
 <body>
+
+    <h1>Number guessing game</h1>
+
+    <p>
+      I have selected a random number between 1 and 100. See if you can guess
+      it in 10 turns or fewer, if you dare... I'll tell you if your guess was too high or too
+      low.
+    </p>
+
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input
+        type="number"
+        min="1"
+        max="100"
+        required
+        id="guessField"
+        class="guessField" />
+      <input type="submit" value="Submit guess" class="guessSubmit" />
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+
+<br>
+    <h1>Other Games!</h1>
    <!--adds text to console specifically-->
     <script>console.log('Hello World')</script>
 
     <!--adds a button to webpage-->
     <button id= "button_A">Press me!</button>
-    <h3 id=""heading_A></h3>
+    <div id="heading_A"></div>
+    <br>
+
+    <input id="textBox" type="text">
+    <div id= "output"></div> 
+    <br>
+
+    <button id="button_B">Press Here!</button>
+    <div id="greeting"></div>
+
+    
 </body>
 </html>
