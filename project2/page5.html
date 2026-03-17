@@ -16,26 +16,50 @@
             Choose your path wisely, as it will influence the challenges you face ahead.
         </p>
         <!-- Your Form -->
-         <form method="get" action="page6.html">
+         <form id="pathForm" action="page6.html">
             <label>Choose your path:</label>
-            <select id="pathChoice" name="pathChoice">
-                <option value="">--Please choose an option--</option>
+            <select id="pathChoice" name="pathChoice" required>
+                <option value=""disabled selected>--Please choose an option--</option>
 
-                <option value="The Path of Strength">
-                    The Path of Strength: Are you strong enough?
-                </option>
+                <option value="strength" id="strength">The Path of Strength: Are you strong enough?</option>
 
-                <option value="The Path of Wisdom">
-                    The Path of Wisdom: How far can your wits take you?
-                </option>
+                <option value="wisdom" id="wisdom">The Path of Wisdom: How far can your wits take you?</option>
 
-                <option value="The Path of Stealth">
-                    The Path of Stealth: How quiet can you be?
-                </option>
+                <option value="stealth" id="stealth">The Path of Stealth: How quiet can you be?</option>
             </select>
-            <button type="submit" id="submitButton">Continue on Your Journey</button>
+
+            <button type="submit">Continue on Your Journey</button>
+
          </form>
         <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
     </section>
+
+    <script>
+        const select = document.getElementById("pathChoice");
+        const form = document.getElementById("pathForm");
+
+    select.addEventListener("change", function() {
+        if (this.value === "strength") {
+            document.body.style.backgroundColor = "#f3dfa2";
+        } 
+        else if (this.value === "wisdom") {
+            document.body.style.backgroundColor = "#7ebdc2";
+        } 
+        else if (this.value === "stealth") {
+            document.body.style.backgroundColor = "#4b644a";
+        } 
+        else {
+            document.body.style.backgroundColor = "white";
+        }
+    });
+
+    form.addEventListener("submit", function() {
+        if (select.value === "stealth") {
+            form.action = "page5b.html";
+        } else {
+            form.action = "page6.html";
+        }
+    });
+    </script>
 </body>
 </html>
