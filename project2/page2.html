@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Selection</title>
     <!-- TODO: Import your CSS File here -->
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="container">
@@ -13,24 +14,22 @@
             <fieldset>
                 <legend>Choose Your Character</legend>
                 <fieldset>
-                <input type="radio" id="aria" name="aria" value="HTML" class ="character">
-                <label for="html"><strong>Aria, the Warrior:</strong> Strong and brave, with the ability to overcome physical obstacles.</label><br>
-                </fieldset>
+                <input type="radio" id="aria" name="choice" value="1" class ="character">
+                <label for="html"><strong>Aria, the Warrior:</strong> Strong and brave, with the ability to overcome physical obstacles.</label>
+                </fieldset><br>
 
                 <fieldset>
-                <input type="radio" id="eldrin" name="eldrin" value="HTML" class ="character">
-                <label for="html"><strong>Eldrin, the Mage:</strong> Wise and knowledgeable, with the power to solve puzzles and cast spells.</label><br>
-                </fieldset>
+                <input type="radio" id="eldrin" name="choice" value="2" class ="character">
+                <label for="html"><strong>Eldrin, the Mage:</strong> Wise and knowledgeable, with the power to solve puzzles and cast spells.</label>
+                </fieldset><br>
 
                 <fieldset>
-                <input type="radio" id="tara" name="tara" value="HTML" class ="character">
-                <label for="html"><strong>Tara, the Rogue:</strong> Quick and cunning, with skills in stealth and</label>
+                <input type="radio" id="tara" name="choice" value="3" class ="character">
+                <label for="html"><strong>Tara, the Rogue:</strong> Quick and cunning, with skills in stealth and persuasion.</label>
                 </fieldset>
-
-                 <input type="submit" value="Continue">
-
             </fieldset>
         </form>
+        <button onclick="location.href='page3.html'">Continue</button>
     </section>
 </body>
 </html>

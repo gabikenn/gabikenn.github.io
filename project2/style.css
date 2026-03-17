@@ -20,10 +20,10 @@ body {
     text-align: left;
 }
 
-label {
+/* label {
     display: block;
     margin: 5px;
-} 
+} */
 
 select {
     padding: 10px;
@@ -84,4 +84,14 @@ button:hover {
 
 .stealth-option:hover {
     background-color: #e8e8e8;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; 
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px; 
 }
