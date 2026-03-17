@@ -19,13 +19,50 @@
             <select id="pathChoice" name="pathChoice" required>
                 <option value=""disabled selected>--Please choose an option--</option>
 
-                <option value="strength" id="strength"></option>
+                <option value="strength" id="strength">Attack first!</option>
 
-                <option value="wisdom" id="wisdom"></option>
+                <option value="wisdom" id="wisdom">Let him come to you...</option>
 
-                <option value="stealth" id="stealth"></option>
+                <option value="stealth" id="stealth">Sneak Attack!</option>
             </select>
+         </fieldset><br>
+
+         <fieldset>
+            <legend>Character Information</legend>
+            <fieldset>
+                <legend>The Brave</legend>
+                <label for="yourName">Your Name:</label>
+                <input type="text" id="nameInput" class="yourName">
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Select Your Weapon:</legend>
+                <input type="radio" id="sword" name="choice" value="1" class ="weapon">
+                <label for="choice">Sword</label>
+
+                <input type="radio" id="bow" name="choice" value="2" class ="weapon">
+                <label for="choice">Bow</label>
+
+                <input type="radio" id="staff" name="choice" value="3" class ="weapon">
+                <label for="choice">Staff</label>
+         </fieldset><br>
+
+         <fieldset>
+                <legend>Select Your Armor:</legend>
+                <input type="checkbox" id="plate" name="choice" value="1" class ="armor">
+                <label for="choice">Plate Armor</label>
+
+                <input type="checkbox" id="leather" name="choice" value="2" class ="armor">
+                <label for="choice">Leather Armor</label>
+
+                <input type="checkbox" id="cloak" name="choice" value="3" class ="armor">
+                <label for="choice">Cloak</label>
+         </fieldset><br>
+
+         <label>Leave a message for Malakar!</label><br>
+         <textarea id="story" name="story" rows="4" cols="60"></textarea>
          </fieldset>
+         <button type="submit" onclick="location.href='page7.html'">Face Malakar!</button>
         <p>Your choice here will determine the fate of the kingdom. Choose wisely.</p>
     </section>
 </body>

@@ -10,10 +10,24 @@
 <body>
     <section class="container">
         <h1>Your Quest Has Concluded</h1>
+        <h2>For Now...</h2>
         <p>Based on your choices, [Insert a dynamic conclusion based on the user's journey and final decision]. 
             The kingdom will remember your deeds for generations to come.
         </p>
         <p>We hope you enjoyed your adventure. Would you like to provide feedback on your experience?</p>
+
+        <form action="feedback.html" method="POST">
+        <label>Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="6" cols="60" placeholder="Enter your feedback here..."></textarea>
+        <button type="submit">Submit Feedback</button><br>
+        <button type="submit" onclick="location.href='welcome.html'">Play Again!</button>
+        </form>
+
+        <p>
+            Thank you, dear traveler! I am honored to have guided you on this journey of wisodm and discovery. 
+            I hope you feel inspired to go forth and face even greater battles! 
+            Your curiosity, dedication, and perspectivev have (and will continue to) take great places!
+        </p>
     </section>
 </body>
 </html>
