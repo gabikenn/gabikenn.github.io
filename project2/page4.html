@@ -17,13 +17,14 @@
         <p><q>I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</q>
         </p>
 
-        <form method="get" action="page5.html">
+        <form method="get" action="page5.html" id="riddleForm">
             <label for="riddelAnswer">Your Answer:</label>
             <input type="text" id="riddleAnswer" name="riddelAnswer">
             <button type="submit" id="submitButton" style="background-color: red;">Submit Answer</button>
         </form>
     </section>
     <script>
+        let form = document.getElementById("riddleForm");
         let subBtn = document.getElementById("submitButton");
         let answerInput = document.getElementById("riddleAnswer");
         let correctAnswer = "echo";
@@ -38,6 +39,13 @@
         }
         answerInput.addEventListener("input", function () {
             buttonChange(correctAnswer, answerInput);
+        });
+
+        form.addEventListener("submit", function (event) {
+            if (answerInput.value.toLowerCase() !== correctAnswer) {
+                event.preventDefault();
+                alert("Incorrect! Keep trying, you must see this journey through!");
+            }
         });
     </script>
 </body>
